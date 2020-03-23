@@ -1,86 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-body {
-  background-color: #f7f7f7 !important;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/*LIVIUUU*/
-.rainbow {
-  margin: 0 auto;
-  margin-top: 150px;
-  width: 200px;
-  height: 100px;
-  box-shadow: 0 0 0 10px #ff0000, 0 0 0 20px #ff7700, 0 0 0 30px #ffdd00, 0 0 0 40px #00ff00, 0 0 0 50px #0000ff, 0 0 0 60px #c77df3, 0 0 0 70px #8a2be2;
-  border-radius: 50px;
-  transform: rotate(-90deg);
-  position: relative;
-}
-.rainbow:before {
-  content: "";
-  width: 150%;
-  height: 300%;
-  background-color: white;
-  position: absolute;
-  left: -70%;
-  top: -100%;
-}
-
-.loginWq {
-  text-align: center;
-  margin: auto;
-  margin-top: auto;
-  margin-top: 5px;
-  padding: 5px 5px 5px 5px;
-  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  background-color: #fff !important;
-}
-.userProfile{
-  z-index:1;
-  position: relative;
-}
-
-.userRaibow{
-  margin-top:70px;
-  box-shadow: 0 0 0 3px #ff0000, 0 0 0 6px #ff7700, 0 0 0 9px #ffdd00, 0 0 0 12px #00ff00, 0 0 0 15px #0000ff, 0 0 0 18px #c77df3, 0 0 0 21px #8a2be2;
-  border-radius: 50px;
-}
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -96,16 +13,11 @@ body {
   text-align: center;
   margin: auto;
   margin-top: 5px;
-  padding: 5px 5px 5px 5px;
-
-  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  background-color: #fff !important;
+  padding-bottom: 60px;
 }
 .albumPanel .aP-hd {
   text-align: left;
-  color: #fff;
+  color: #6d5c53;
 }
 .albumPanel .aP-hd i {
   background-position: -294px 0;
@@ -160,7 +72,7 @@ body {
   text-decoration: none;
 }
 .albumPanel .album:hover .a-cover {
-  /*opacity: 0;*/
+  opacity: 0;
 }
 .albumPanel .album:hover .a-cont {
   opacity: 1;
@@ -193,17 +105,21 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  height: 72px;
   width: 100%;
   margin: 0;
   padding: 0;
+  background-image: -webkit-linear-gradient(top, rgba(240, 234, 228, 0.8) 0%,rgba(240, 234, 228, 1)17%);
+  background-image: -moz-linear-gradient(top, rgba(240, 234, 228, 0.8) 0%,rgba(240, 234, 228, 1)17%);
+  background-image: -ms-linear-gradient(top, rgba(240, 234, 228, 0.8) 0%,rgba(240, 234, 228, 1)17%);
+  background-image: -o-linear-gradient(top, rgba(240, 234, 228, 0.8) 0%,rgba(240, 234, 228, 1)17%);
+  background-image: linear-gradient(top, rgba(240, 234, 228, 0.8) 0%,rgba(240, 234, 228, 1)17%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ccf0eae4,endcolorstr=#fff0eae4,gradientType=0);
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   -ms-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  background-color: red;
-  opacity: 0.8;
-  top: 80px;
 }
 .albumPanel .album .a-layer .al-brand,
 .albumPanel .album .a-layer .al-title {
@@ -216,25 +132,26 @@ body {
 .albumPanel .album .a-layer .al-brand {
   display: block;
   margin: 0;
-  color: #fff;
+  color: #6d5c53;
   text-decoration: none;
+  line-height: 22px;
 }
 .albumPanel .album .a-layer .al-title {
   display: inline-block;
-  color: #fff;
+  color: #6d5c53;
   text-decoration: none;
-  font-size: 10px;
-  /*line-height: 18px;
-  height: 26px;*/
+  font-size: 16px;
+  line-height: 26px;
+  height: 26px;
   min-width: 80%;
   _width: 95%;
-  word-wrap: break-word;
+  white-space: nowrap;
   border-top: 1px dotted #a8a39f;
   overflow: hidden;
 }
 .albumPanel .album .a-layer .al-count {
   display: block;
-  color: #fff;
+  color: #beb5ae;
   text-decoration: none;
 }
 .albumPanel .album .a-more {
@@ -248,7 +165,7 @@ body {
   height: 100%;
   font-size: 16px;
   line-height: 2.4;
-  letter-spacing: 0.3em;
+  letter-spacing: .3em;
   font-family: arial;
   background-color: #dbdbdb;
   font-weight: bold;
@@ -263,10 +180,8 @@ body {
   background-color: transparent;
 }
 .albumPanel .album:hover .a-layer {
-  /* background: none;
+  background: none;
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00000000,endcolorstr=#00000000,gradientType=0);
-*/
-  top: 0px;
 }
 .albumPanel .album:hover .a-layer .al-brand,
 .albumPanel .album:hover .a-layer .al-title {
@@ -281,7 +196,7 @@ body {
   transition: all 0.2s ease-in 0s;
 }
 .albumPanel .hasAlbums .album:last-child:hover .a-more {
-  background-color: #999a99;
+  background-color: #999A99;
 }
 .albumPanel .hasAlbums .album-last-child .a-more {
   display: block;
@@ -292,7 +207,7 @@ body {
   transition: all 0.2s ease-in 0s;
 }
 .albumPanel .hasAlbums .album-last-child:hover .a-more {
-  background-color: #999a99;
+  background-color: #999A99;
 }
 .albumPanel .w1,
 .albumPanel .w2 {
@@ -305,54 +220,21 @@ body {
   -ms-transform: none;
 }
 .albumPanel .w1 {
-  width: 100%;
+  width: 190px;
   height: 240px;
 }
 .albumPanel .w1 img {
-  width: 100%;
+  width: 190px;
 }
-
+.albumPanel .w1 .al-brand {
+  padding-top: 3px;
+}
 .albumPanel .w1:hover .a-mask {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 45%,
-    rgba(0, 0, 0, 0.1) 52%,
-    rgba(0, 0, 0, 0.55) 67%,
-    rgba(0, 0, 0, 0.7) 70%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 45%,
-    rgba(0, 0, 0, 0.1) 52%,
-    rgba(0, 0, 0, 0.55) 67%,
-    rgba(0, 0, 0, 0.7) 70%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -ms-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 45%,
-    rgba(0, 0, 0, 0.1) 52%,
-    rgba(0, 0, 0, 0.55) 67%,
-    rgba(0, 0, 0, 0.7) 70%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 45%,
-    rgba(0, 0, 0, 0.1) 52%,
-    rgba(0, 0, 0, 0.55) 67%,
-    rgba(0, 0, 0, 0.7) 70%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 45%,
-    rgba(0, 0, 0, 0.1) 52%,
-    rgba(0, 0, 0, 0.55) 67%,
-    rgba(0, 0, 0, 0.7) 70%,
-    rgba(0, 0, 0, 1) 81%
-  );
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 0.55) 67%,rgba(0, 0, 0, .7) 70%, rgba(0, 0, 0, 1) 81%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 0.55) 67%,rgba(0, 0, 0, .7) 70%, rgba(0, 0, 0, 1) 81%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 0.55) 67%,rgba(0, 0, 0, .7) 70%, rgba(0, 0, 0, 1) 81%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 0.55) 67%,rgba(0, 0, 0, .7) 70%, rgba(0, 0, 0, 1) 81%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 0.55) 67%,rgba(0, 0, 0, .7) 70%, rgba(0, 0, 0, 1) 81%);
 }
 .albumPanel .w1:hover .a-mask i {
   background-position: -292px -60px;
@@ -377,36 +259,11 @@ body {
   min-width: 60%;
 }
 .albumPanel .w2:hover .a-mask {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -ms-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 53%,rgba(0, 0, 0, 0.65) 74%,rgba(0, 0, 0, 1) 81%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 53%,rgba(0, 0, 0, 0.65) 74%,rgba(0, 0, 0, 1) 81%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 53%,rgba(0, 0, 0, 0.65) 74%,rgba(0, 0, 0, 1) 81%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 53%,rgba(0, 0, 0, 0.65) 74%,rgba(0, 0, 0, 1) 81%);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0) 53%,rgba(0, 0, 0, 0.65) 74%,rgba(0, 0, 0, 1) 81%);
 }
 .albumPanel .w2:hover .a-mask i {
   background-position: -371px -56px;
@@ -430,11 +287,11 @@ body {
   text-decoration: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.7);
-  -webkit-transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0s;
-  -moz-transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0s;
-  -ms-transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0s;
-  -o-transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0s;
-  transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0s;
+  -webkit-transition: background-color .2s ease-in 0s, color .2s ease-in 0s;
+  -moz-transition: background-color .2s ease-in 0s, color .2s ease-in 0s;
+  -ms-transition: background-color .2s ease-in 0s, color .2s ease-in 0s;
+  -o-transition: background-color .2s ease-in 0s, color .2s ease-in 0s;
+  transition: background-color .2s ease-in 0s, color .2s ease-in 0s;
 }
 .albumPanel .aP-expand i,
 .albumPanel .aP-collapse i {
@@ -517,19 +374,18 @@ body {
 .ks-ie8 .aP-collapse {
   text-indent: -99999px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   /* retina screen */
   .albumPanel .aP-hd b s {
     display: inline;
-    color: #fff;
+    color: #6d5c53;
     margin-left: 17px;
     text-decoration: none;
     background: white;
     padding: 2px 0;
   }
   .albumPanel .aP-collapse {
-    color: #fff;
+    color: #6d5c53;
   }
   .albumPanel .aP-collapse i {
     background-position: -201px -151px;
@@ -542,7 +398,7 @@ body {
     background-position: -201px -216px;
   }
   .albumPanel .aP-expand {
-    color: #fff;
+    color: #6d5c53;
   }
   .albumPanel .aP-expand i {
     background-position: -202px -22px;
