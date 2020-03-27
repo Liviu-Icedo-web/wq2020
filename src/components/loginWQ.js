@@ -154,7 +154,7 @@ class LoginWQ extends Component {
     render() {
         return (
         <div className="loginWq"> 
-            <div class="userProfile">
+            <div className="userProfile">
                 {this.state.isSignedIn ? (
                 <span>
                     <h1>Wall Quarantine 2020</h1>

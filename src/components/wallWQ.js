@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import firebase from 'firebase';
 import 'firebase/auth';
-import '../assets/index.less'
+import '../assets/index.less';
+import UserItem from './UserItem';
 import AutoResponsive from 'autoresponsive-react';
 
 const db = firebase.firestore();
@@ -52,26 +53,15 @@ getAutoResponsiveProps() {
 
 render(){
     return (
-        console.log(this.state.containerWidth),
-        console.log(document.body.clientWidth),
+        console.log("wallWQ 1 -- ",this.state.containerWidth),
+        console.log("wallWQ 2 -- ",this.refs.container),
       <div className="albumPanel"> 
             <AutoResponsive ref="container" {...this.getAutoResponsiveProps()}>
             {
-                this.state.users.map((user,ind) => (
-                    <a key={user.id} href="#" className='w1 album item' style={style}>
-                  
-                    <img className="a-cover"
-                    alt={"profile img"}
-                    src={user.img}
-                />                 
-                <div className="a-layer">                   
-                    <span className="al-title">{user.name}</span>
-                    <span className="al-brand">{user.location}</span>
-                    <span className="al-count">{user.country}</span>                    
-                </div>
-                        
-                                     
-                    </a>
+                this.state.users.map((userItem, ind) => (                   
+                <a key={userItem.id} href="#" className='w1 album item' style={style}>                  
+                    <UserItem userItem={userItem}  />        
+                </a>
                 ))
             }
             </AutoResponsive>
@@ -92,7 +82,9 @@ render(){
         //         </li>
         //     ))
         // }
-        // </ul>
+        // </ul> https://codesandbox.io/embed/arbabacar-1lyux --> tiene el Filer que necesitas
+        // https://dev.to/prvnbist/create-a-tags-input-component-in-reactjs-ki -> Search tags
+
         );
 }
 

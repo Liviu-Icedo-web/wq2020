@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import LoginWQ from './components/loginWQ';
+import WallWQV2 from './components/wallWQ-v2'
 import WallWQ from './components/wallWQ'
 
 class App extends Component {
@@ -8,7 +9,8 @@ class App extends Component {
     return (
       <div className="App ui container">
           <LoginWQ />
-          <WallWQ />
+          <WallWQV2 />
+         
       </div>
     );
   }
