@@ -1,8 +1,8 @@
 import React from "react";
 
 const UserItem = ({userItem}) => {
-    return (
-        <div>            
+    return (             
+        <div>       
             <img className="a-cover"
                 alt={"profile img"}
                 src={userItem.img}

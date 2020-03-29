@@ -6,29 +6,39 @@ const Search = ({
     setSearchValue,
     filterByType,
     setFilterByType,
-    filterByYear,
-    setFilterByYear
+    filterByCity,
+    setFilterByCity,
+    filterByCountry,
+    setFilterByCountry,
+    listUsers,
+    listCities,
+    listCountries,
 
 }) => {
-    const handleSearchInputChanges = e =>{
+    const handleSearchInputChanges = e => {
         setSearchValue(e.target.value);
     };
 
-return (
-    <form className="search">
-        <input 
-            placeholder="Search"
-            value={searchvalue}
-            onChange={handleSearchInputChanges}
-            type="text"
-        />
-        <Filter
-            filterByType={filterByType}
-            setFilterByType={setFilterByType}
-            filterByYear={filterByYear}
-            setFilterByYear={setFilterByYear}
-        />
+    return (
+        <form className="search">
+            <input
+                placeholder="Search"
+                value={searchvalue}
+                onChange={handleSearchInputChanges}
+                type="text"
+            />
+            <Filter
+                filterByType={filterByType}
+                setFilterByType={setFilterByType}
+                filterByCity={filterByCity}
+                setFilterByCity={setFilterByCity}
+                filterByCountry={filterByCountry}
+                setFilterByCountry={setFilterByCountry}
+                listUsers={listUsers}
+                listCities={listCities}
+                listCountries={listCountries}
+            />
         </form>
     );
-
 }
+export default Search;
