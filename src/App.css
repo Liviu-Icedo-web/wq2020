@@ -559,3 +559,10 @@ body {
   color: white;
   font-size: 120px;
 }
+
+/* MAP LIVIU */
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+}
+
