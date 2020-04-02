@@ -1,4 +1,5 @@
 import React from "react";
+import { Dropdown } from 'semantic-ui-react'
 
 const Filter = ({
     filterByType,
@@ -28,6 +29,18 @@ const Filter = ({
     return (
         <div>
             <div>
+
+            <Dropdown
+                placeholder='Select Country'
+                fluid
+                search
+                selection={'bs'}
+                options={listCountries.map(c =>{
+                   return {key:c.iso ,value:c.iso, flag: c.iso, text: c.name} 
+                })}
+                onChange={()=>console.log('iliee')}
+        />
+
             <label> Countries : </label>
                 <select defaultValue={filterByCountry} onChange={handleFilterByCountryChange}>
                 <option key={-1} value={''}>{'None'}</option>

@@ -28,7 +28,7 @@ function WallWQV2() {
             const dataUsers = await db.collection('user').get();
             setListUsers(dataUsers.docs.map(doc => ({ ...doc.data(), id: doc.id })));
 
-            const dataCities = await db.collection('city').get();
+            const dataCities = await db.collection('city').limit(3).get();
             setListCities(dataCities.docs.map(doc => ({ ...doc.data(), id: doc.id })));
 
             const dataCountries = await db.collection('countries').get();

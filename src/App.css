@@ -8,6 +8,7 @@
 }
 body {
   background-color: #f7f7f7 !important;
+  /*background-image: linear-gradient(to right, #4c1eaf , #5F2DD6);*/
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -201,7 +202,7 @@ body {
   -ms-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  background-color: red;
+  background-color: #5F2DD6;
   opacity: 0.8;
   top: 80px;
 }
@@ -565,4 +566,14 @@ body {
   height: 400px;
   width: 100%;
 }
+
+/* Model
+https://www.behance.net/gallery/90795999/King-of-Prizes
+https://dribbble.com/shots/10850613-Pills-management#shot-description
+https://www.behance.net/gallery/65873341/Poup-Site-Branding
+
+https://kingofprizes.com/home
+https://www.fotonaut.cz/
+
+*/
 
