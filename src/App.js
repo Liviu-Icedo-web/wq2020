@@ -1,33 +1,41 @@
-import React, { Component } from 'react';
+import React ,{useState,Suspense}from 'react';
 import './App.css';
 import LoginWQ from './components/loginWQ';
 import WallWQV2 from './components/wallWQ-v2';
 import Maps from './components/Maps';
 import WallWQ from './components/wallWQ';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import { Icon } from 'semantic-ui-react';
+import { withTranslation } from 'react-i18next'
 
 
 
 function App() {
-  return (
-    // <div className="App ui container">
-    //   <LoginWQ />
-    //   <WallWQV2 />
-    //   <Maps />
+const [homeClass,setHomeClass] =useState('item active');
+const [mapClass,setMapClass] =useState('item');
 
-    // </div>
+const menuHome= () =>{  
+  setHomeClass('item active')
+  setMapClass('item')
+}  
 
+const menuMap=() =>{
+setMapClass('item active')
+setHomeClass('item')
+}
 
-    <Router>
+ 
+ return(
+  
+  <Suspense fallback='Loading'>
+    <Router>  
       <div className="App ui container">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/map">Map</Link>
-          </li>
-        </ul>
+      <div className="ui two item menu sticky">
+  
+          <Link className= {homeClass} onClick={menuHome} to="/"><Icon name='list' />List</Link>
+          <Link className= {mapClass} onClick={menuMap}to="/map"><Icon name='map'/> Map</Link>
+      </div>
+       
 
         <Switch>
           <Route exact path="/">
@@ -40,15 +48,9 @@ function App() {
         </Switch>
       </div>
     </Router>
+    </Suspense>
+
   );
-}
-
-function MapView() {
-  return <h2>BAAA</h2>;
-}
-
-function Home() {
-  return <h2>Home</h2>;
 }
 
 

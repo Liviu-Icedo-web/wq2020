@@ -1,7 +1,8 @@
 import React from "react";
+const style = { width: 100, height: 100 }
 
 const UserItem = ({userItem}) => {
-    return (             
+    return (  
         <div>       
             <img className="a-cover"
                 alt={"profile img"}
@@ -13,6 +14,7 @@ const UserItem = ({userItem}) => {
                 <span className="al-count">{userItem.country}</span>                    
             </div>
         </div>
+        
     );
 };
 

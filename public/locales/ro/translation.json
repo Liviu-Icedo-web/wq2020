@@ -1,0 +1,19 @@
+{
+        "allok": "Totul va fi bine!!!",
+        "auth":"Continuă cu Facebook",
+        "dezauth":"Dezautentificare",
+        "timeIn":"timp petrecut în casă",
+        "search":"Caută ...",
+        "searchCountry": "Alege țara",
+        "searchCity": "Alege orașul",
+        "reset": "Reseteaza filtrele",
+        "days":"Zile",
+        "hours":"Ore",
+        "min":"Minute",
+        "sec":"Secunde",
+        "bePart":"Fă parte din lista celor care au facut carantina 2020",
+        "chooseDate":"Alege data pentru INCEPUT de izolare:",
+        "thankYou":"Mulțumesc",
+        "finLockDown":"felicitări, ai stat in casă:",
+        "txtChooseLockDown":"Alege data pentru SFÂRȘIT de izolare:"  
+}

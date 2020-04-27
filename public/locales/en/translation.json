@@ -1,0 +1,20 @@
+{
+   
+    "allok": "All will be ok !!!",
+    "auth":"Login Facebook",
+    "dezauth":"Logout",
+    "timeIn":"time inside house",
+    "search":"Search users...",
+    "searchCountry": "Search Country",
+    "searchCity": "Search a city",
+    "reset": "Clear",
+    "days":"Days",
+    "hours":"Hours",
+    "min":"Minutes",
+    "sec":"Seconds",
+    "bePart":"Be part of the WQ 2020",
+    "chooseDate":"Choose the date for START lockdown:",
+    "thankYou":"Thank you !!!",
+    "finLockDown":"congrats you did a good job, staing at home:",
+    "txtChooseLockDown":"Choose the date for STOP lockdown:"
+}

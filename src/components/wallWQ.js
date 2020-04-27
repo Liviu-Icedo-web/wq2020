@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import firebase from 'firebase';
 import 'firebase/auth';
-import '../assets/index.less';
+import './assets/index.less';
 import UserItem from './UserItem';
 import AutoResponsive from 'autoresponsive-react';
 

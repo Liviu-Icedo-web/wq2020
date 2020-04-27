@@ -1,66 +1,59 @@
 import React from "react";
 import { Dropdown } from 'semantic-ui-react'
+import { useTranslation } from 'react-i18next';
 
 const Filter = ({
-    filterByType,
-    setFilterByType,
-
-    filterByCity,
     setFilterByCity,
-
     filterByCountry,
     setFilterByCountry,
-    listUsers,
     listCities,
     listCountries,
 }) => {
     const clearFilter = e => {
-        setFilterByType("");
+        setFilterByCity("");
+        setFilterByCountry("");
     };
 
-    const handleFilterByTypeCity = e =>{
-        setFilterByCity(e.target.value);
+    const handleFilterByTypeCity = data => {
+        setFilterByCity(data.value);
     };
 
-    const handleFilterByCountryChange = e => {
-        setFilterByCountry(e.target.value)
+    const handleFilterByCountryChange = data => {
+        setFilterByCountry(data.value)
     };
+    const { t } = useTranslation();
 
     return (
         <div>
-            <div>
-
-            <Dropdown
-                placeholder='Select Country'
-                fluid
-                search
-                selection={'bs'}
-                options={listCountries.map(c =>{
-                   return {key:c.iso ,value:c.iso, flag: c.iso, text: c.name} 
-                })}
-                onChange={()=>console.log('iliee')}
-        />
-
-            <label> Countries : </label>
-                <select defaultValue={filterByCountry} onChange={handleFilterByCountryChange}>
-                <option key={-1} value={''}>{'None'}</option>
-                {listCountries.map((country, ind) => (
-                            <option key={ind} value={country.iso}>{country.name}</option>
-                        ))
-                    }
-                </select>
-                <label>City : </label>
-                <select defaultValue={filterByCity} onChange={handleFilterByTypeCity}>
-                        <option key={-1} value={''}>{'None'}</option>
-                    {listCities.map((city, ind) => (
-                            <option key={ind} value={city.name}>{city.name}</option>
-                        ))
-                    }
-                
-                </select>
-                
+            <div className="wq-dropdown">
+                <div className="wq-45">
+                <Dropdown
+                    placeholder={t('searchCountry')}
+                    fluid
+                    search
+                    selection={true}
+                    options={listCountries.map(c => {
+                        return { key: c.iso, value: c.iso, flag: c.iso, text: c.name }
+                    })}
+                    onChange={(e, data) => handleFilterByCountryChange(data)}
+                />
+                </div>
+                <div className="wq-45">
+                <Dropdown
+                    placeholder={t('searchCity')}
+                    fluid
+                    search
+                    multiple
+                    defaultValue={filterByCountry}
+                    selection={true}
+                    options={listCities.map((city, ind) => {
+                        return { key: ind, value: city.name, flag: city.country_iso.toLowerCase(), text: city.name + ' + ' + city.people }
+                    })}
+                    onChange={(e, data) => handleFilterByTypeCity(data)}
+                />
+                </div>
             </div>
-        <button onClick={clearFilter}>clear</button>
+            <button className='ui basic mini button wq-clear' onClick={clearFilter}>{t('reset')}</button>
         </div>
     );
 };
